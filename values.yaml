@@ -1,0 +1,6 @@
+ingress:
+  enabled: false
+  host: kibana.example.com
+
+elasticsearch:
+  url: http://elasticsearch-service:9200

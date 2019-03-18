@@ -1,0 +1,16 @@
+{{ if .Values.ingress.enabled }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kibana-ingress
+spec:
+  rules:
+  - host: {{ .Values.ingress.host }}
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: kibana-service
+            servicePort: 5601
+
+{{ end }}
